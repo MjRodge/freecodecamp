@@ -13,6 +13,7 @@ var newQuote = function() {
   $.getJSON("https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1", function(a) {
     $(".quote").append("<h3>" + a[0].content + "</h3><p class='author'>&#45; " + a[0].title + "</p>");
     quoteText = $(".quote").text();
+    $('#background').css('background-image', 'url("https://source.unsplash.com/random/1920×1440")');
   });
 };
 
