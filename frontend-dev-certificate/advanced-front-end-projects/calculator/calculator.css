@@ -14,6 +14,7 @@ body {
   height: 35%;
   background-color: #efefef;
   text-align: right;
+  border-bottom: 2px solid #00CCFF;
 }
 #calc-screen p {
   padding-top: 15px;
