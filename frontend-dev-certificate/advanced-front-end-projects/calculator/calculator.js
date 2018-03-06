@@ -52,10 +52,18 @@ function checkKeyPressed(keyPressed) {
     case "8":
     case "9":
     case ".":
-      pushFullInputArray(keyPressed);
-      pushResultArray(keyPressed);
-      outputFullInputArrayValues();
-      outputResultArrayValues();
+      if (calcResultArray.slice(-1)[0]  == "/" || calcResultArray.slice(-1)[0] == "*" || calcResultArray.slice(-1)[0] == "+" || calcResultArray.slice(-1)[0] == "-") {
+        clearResult();
+        pushFullInputArray(keyPressed);
+        pushResultArray(keyPressed);
+        outputFullInputArrayValues();
+        outputResultArrayValues();
+      } else {
+        pushFullInputArray(keyPressed);
+        pushResultArray(keyPressed);
+        outputFullInputArrayValues();
+        outputResultArrayValues();
+      }
       break;
     case "+":
     case "-":
